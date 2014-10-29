@@ -1,0 +1,14 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    mime-types (2.3)
+    rack (1.5.2)
+    rmagick (2.13.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  mime-types
+  rack
+  rmagick

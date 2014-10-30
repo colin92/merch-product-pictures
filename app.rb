@@ -1,6 +1,7 @@
 require 'digest/sha1'
 require 'mime-types'
-require './fetcher'
+require './lib/fetcher'
+require './lib/transformer'
 require './lib/file_streamer'
 
 VALID_PRODUCT_TYPES = ['pillow'].freeze
@@ -23,7 +24,7 @@ module MerchProductPictures
           Fetcher.fetch(params['url'], save_path)
 
           # Transform
-          # Transformer.transform(params['type'], save_path)
+          Transformer.transform(params['type'], save_path)
         rescue => e
           return [500, {}, ['Error occured', "\n\n", e.class.name, "\n", e.message]]
         end

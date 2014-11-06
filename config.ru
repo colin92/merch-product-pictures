@@ -1,3 +1,6 @@
+require 'rubygems'
+require 'bundler/setup'
+
 require 'rack'
 require './app'
 require './lib/params_middleware'
